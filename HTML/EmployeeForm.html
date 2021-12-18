@@ -1,0 +1,72 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <link rel="stylesheet" href="D:\Employee_Form\CSS\Form_Style.css">
+        <title>EMPLOYEE DETAILS</title>
+       <script src="D:\Employee_Form\JS\EmployeeList_JS.js"></script>
+       <script src="D:\Employee_Form\JS\Validation_JS.js"></script>
+    </head>
+    <body>
+        <div class="topnav">
+            <a class="active" href="#home">Home</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+          </div>
+        <h1>EMPLOYEE REGISTRATION</h1>
+        <div >
+            <div class="container">
+                <p>Basic Details:</p>
+                <input   type="text"  name="Ename" placeholder="Full Name" id="Ename" onfocus="this.value=''"><br>
+                <input  type="email"  name="Email" placeholder="Email" id="Email" onblur="checkEmail()" onfocus="this.value=''"><br>
+                <input  type="number"  name="Age" placeholder="Age" id="Age" onfocus="this.value=''"><br>
+                <input   type="text"  name="Country" placeholder="Country" id="Country" onfocus="this.value=''"><br>
+                <input  type="text"  name="State" placeholder="State" id="State" onfocus="this.value=''"><br>
+                <input  type="password"  name="Password" placeholder="Password" id="Password" onblur="validatePassword()" onfocus="this.value=''"><br>
+
+                <p>Choose your Gender:</p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="Woman" name="Gender" value="Woman">
+                <label for="female">Woman</label>
+                &nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="Man" name="Gender" value="Man">
+                <label for="Man">Man</label>
+                &nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="Non-binary" name="Gender" value="Non-binary">
+                <label for="Non-binary">Non-binary</label><br>
+
+                <p>Skill Set</p>
+                <input type="checkbox" id="Skill" name="Skill" value="HTML" class="checks">
+                <label for="Skill"> HTML</label>&nbsp;&nbsp;
+                <input type="checkbox" id="Skill" name="Skill" value="CSS" class="checks">
+                <label for="Skill"> CSS</label>&nbsp;&nbsp;
+                <input type="checkbox" id="Skill" name="Skill" value="JS" class="checks">
+                <label for="Skill"> JS</label>&nbsp;&nbsp;
+                <input type="checkbox" id="Skill" name="Skill" value="JAVA" class="checks">
+                <label for="Skill"> JAVA</label>&nbsp;&nbsp;
+                <input type="checkbox" id="Skill" name="Skill" value="PYTHON" class="checks">
+                <label for="Skill">PYTHON</label>&nbsp;&nbsp;
+                <input type="checkbox" id="Skill" name="Skill" value="CPP" class="checks">
+                <label for="Skill">CPP</label><br>
+                <input class="btn"  type="submit" id="btn" value="Submit" onclick="AddRow()">
+            </div> 
+        </div>
+<DIV ID="SectionName" STYLE="display:none">       
+<table  id="show">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th>Country</th>
+            <th>State</th>
+            <th>Password</th>
+            <th>Gender</th>
+            <th>Skills</th>
+        </tr>
+    </thead>
+</table>
+</DIV>
+        <div class="footer">
+            <br>
+            © 2021 Rositta Joy InApp TVM
+        </div>
+    </body>
+</html>
